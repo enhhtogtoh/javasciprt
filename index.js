@@ -1,45 +1,231 @@
-const aaa = "aaaa";
-const bbb = 123;
-// 1 цагийг минут руу шилжүүлэх.
-const hour = "60";
-console.log(hour * 2);
-console.log(hour * 12);
-console.log(hour * 2 + 30);
-// 2 тэгш "even" or сондгой "odd".
-let a = 2,
-  b = 7,
-  c = 1;
-console.log(a % 2 === 0 && "even");
-console.log(b % 2 === 1 && "odd");
-console.log(c % 2 === 1 && "odd");
-// 3 өсөх дараалал тийм "true" or үгүй "false".
-const numbers = (a, b, c) => a < b && b < c;
-console.log(numbers(1, 8, 3));
-console.log(numbers(1, 3, 8));
-// 4 хамгийн их утга.
-const ihtoo = (a, b, c) => Math.max(a, b, c);
-console.log(ihtoo(9, 4, 3));
-console.log(ihtoo(1, 7, 5));
+// const aaa = "aaaa";
+// const bbb = 123;
+// // 1. цагийг минут руу шилжүүлэх.
+// const hour = "60";
+// console.log(hour * 2);
+// console.log(hour * 12);
+// console.log(hour * 2 + 30);
+// // 2. тэгш "even" or сондгой "odd".
+// let a = 2,
+//   b = 7,
+//   c = 1;
+// console.log(a % 2 === 0 && "even");
+// console.log(b % 2 === 1 && "odd");
+// console.log(c % 2 === 1 && "odd");
+// // 3. өсөх дараалал тийм "true" or үгүй "false".
+// const numbers = (a, b, c) => a < b && b < c;
+// console.log(numbers(1, 8, 3));
+// console.log(numbers(1, 3, 8));
+// // 4. хамгийн их утга.
+// const ihtoo = (a, b, c) => Math.max(a, b, c);
+// console.log(ihtoo(9, 4, 3));
+// console.log(ihtoo(1, 7, 5));
 
-const bagatoo = (a, b, c) => Math.min(a, b, c);
-console.log(bagatoo(2, 3, 4));
-console.log(bagatoo(20, 30, 40));
-// 5 буурах эрэмбэ.
-const points = [40, 60, 90, 10, 30];
-points.sort(function (a, b) {
-  return b - a;
-});
-console.log(points);
-// 6 өгөгдсөн гурвалжны периметрийг ол.
-const perimetr = (a, b, c) => a + b + c;
-console.log(perimetr(3, 4, 5));
-console.log(perimetr(6, 7, 8));
-// 7 бүхэл тооны нийлбэрийг ол.
+// const bagatoo = (a, b, c) => Math.min(a, b, c);
+// console.log(bagatoo(2, 3, 4));
+// console.log(bagatoo(20, 30, 40));
+// // 5. буурах эрэмбэ.
+// const points = [40, 60, 90, 10, 30];
+// points.sort(function (a, b) {
+//   return b - a;
+// });
+// console.log(points);
+// // 1. өгөгдсөн гурвалжны периметрийг ол.
+// const perimetr = (a, b, c) => a + b + c;
+// console.log(perimetr(3, 4, 5));
+// console.log(perimetr(6, 7, 8));
+// // 2. бүхэл тооны нийлбэрийг ол.
+// const num = 8.7;
+// console.log(parseInt(num) + 1 + 3 + 5 + 7);
+// // 3. өгөгдсөн тэгш өнцөгтийн талбай ба периметрийг ол.
+// const talbai = (a, b, s) => (s = a * b);
+// console.log(talbai(10, 5));
 
-// 8 өгөгдсөн тэгш өнцөгтийн талбай ба периметрийг ол.
-const talbai = (a, b, s) => (s = a * b);
-console.log(talbai(10, 5));
+// const perimetrs = (a, b, p) => (p = (a + b) * 2);
+// console.log(perimetrs(10, 5));
+// // 4. өгөгдсөн секундыг минут секунд болго.
+// const seconds = "98";
+// const minut = parseInt(seconds / 60);
+// const second = seconds % 60;
+// console.log(minut, "мин", second, "сек");
+// // 5. өгөгдсөн секундыг цаг минут секунд болго.
+// const seconds1 = "1297";
+// const hour1 = parseInt(seconds1 / 3600);
+// const minut1 = parseInt((seconds1 % 3600) / 60);
+// const sec = seconds1 % 60;
+// console.log(hour1, "цаг", minut1, "мин", sec, "сек");
+// // 6. өгөгдсөн минут, секундыг, секунд руу шилжүүл.
+// // 7. өгөгдсөн цаг, минут, секундыг секунд руу шилжүүл.
+// // 1. өгөгдсөн цагийг хоног цагт шилжүүл.
+// const tsag = "38";
+// const day = parseInt(tsag / 24);
+// const tsag1 = tsag % 24;
+// console.log(day, "хоног", tsag1, "цаг");
+// // 2. өгөгдсөн 4хоног, 40цагийг цагт шилжүүл.
+// let honog = 4;
+// tsag2 = 40;
+// const hour2 = honog * 24 + tsag2;
+// console.log(hour2, "цаг");
+// // 3. өгөгдсөн 106 сарыг жил сар луу шилжүүл.
+// const month = "106";
+// const year = parseInt(month / 12);
+// const mounth = month % 12;
+// console.log(year, "жил", mounth, "сар");
+// // 4. өгөгдсөн 90 жил, 98 сарыг сард шилжүүл.
+// let jil = 90;
+// sar = 98;
+// const year1 = jil * 12 + sar;
+// console.log(year1, "сар");
+// // 5. өгөгдсөн 4 тооны багыг ол. (9 3 2 8)
+// const num1 = 9;
+// const num2 = 3;
+// const num3 = 2;
+// const num4 = 8;
+// let min = num3;
+// if (min > num1) {
+//   min = num1;
+// }
+// if (min > num2) {
+//   min = num2;
+// }
+// if (min > num4) {
+//   min = num4;
+// }
+// if (min > num3) {
+//   min = num3;
+// }
+// console.log(min, "бага тоо");
+// // 6. өгөгдсөн 4 тооны 5-аас бага тоонуудын үржвэрийг ол. (2 9 4 3)
+// const numbers1 = 2;
+// const numbers2 = 9;
+// const numbers3 = 4;
+// const numbers4 = 3;
+// let minn = 1;
+// if (numbers1 < 5) {
+//   minn *= numbers1;
+// }
+// if (numbers2 < 5) {
+//   minn *= numbers2;
+// }
+// if (numbers3 < 5) {
+//   minn *= numbers3;
+// }
+// if (numbers4 < 5) {
+//   minn *= numbers4;
+// }
+// console.log(minn);
+// 7. өгөгдсөн 6 тооны 5-аас их тоонуудын үржвэрийг ол. (11 9 4 3 6 2)
+// const too1 = 11;
+// const too2 = 9;
+// const too3 = 4;
+// const too4 = 3;
+// const too5 = 6;
+// const too6 = 2;
+// let max = 1;
+// if (too1 > 5) {
+//   max *= too1;
+// }
+// if (too2 > 5) {
+//   max *= too2;
+// }
+// if (too3 > 5) {
+//   max *= too3;
+// }
+// if (too4 > 5) {
+//   max *= too4;
+// }
+// if (too5 > 5) {
+//   max *= too5;
+// }
+// if (too6 > 5) {
+//   max *= too6;
+// }
+// console.log(max);
 
-const perimetrs = (a, b, p) => (p = (a + b) * 2);
-console.log(perimetrs(10, 5));
-// 9 өгөгдсөн секундыг минут секунд болго.
+// 1. 2 тоог оруулж ихийг нь хэвлэх.
+const a = 40;
+const b = 50;
+let ih = 1;
+if (ih < 45) {
+  ih = a;
+}
+if (ih < 45) {
+  ih = b;
+}
+console.log(ih);
+// 2. тоог тэгш содгой эсэхийг шалга.
+const too = 6;
+console.log(too % 2 === 0);
+// 3. 3 ширхэг тоон дундах хамгийн их/хамгийн бага утгыг хэвлэ.
+// 4. стрингийн уртыг хэвлэх.
+const string = "hello_world";
+console.log(string.length);
+// 5. стринг эх"ний болон сүүлчийн тэмдгийг нийлүүлэх.
+const string1 = "hello_world";
+console.log(string1[0] + string[10]);
+// 6. стрингийг том үсэг болгож хувиргах.
+const string2 = "hello_world";
+console.log(string2.toUpperCase());
+// 7. стринг дотор тодорхой тэмдэгт байгаа эсэхийг шалгах.
+const string3 = "banana";
+// 8. тоог 3-аар болон 5-аар хуваагддаг эсэхийг шалгах.3-т хуваагдвал Fizz, 5-т хуваагдвал Buzz, хоёуланд нь хуваагддаг бол FizzBuzz гэж хэвлэ.
+let tooo = 15;
+// 9. хоёр string-ийг нэгтгэх a = Hello b = World.
+const string4 = "Hello";
+const string5 = "World";
+const niilber = string4 + string5;
+console.log(niilber);
+// 10. 2 тооны дундаж.
+const tsipr1 = 40;
+const tsipr2 = 20;
+let dundaj = (tsipr1 + tsipr2) / 2;
+console.log(dundaj);
+// 11. тоо эерэг эсвэл сөрөг эсэхийг шалгах - "эерэг", "сөрөг" эсвэл "тэг".
+let too1 = 12;
+too2 = 15;
+too3 = 0;
+console.log(too1 % 2 === 0 && "эерэг");
+console.log(too2 % 2 === 1 && "сөрөг");
+console.log(too3 % 2 === 0 && "тэг");
+// 12. тоог 10-аас их эсэхийг шалгах.
+const too4 = 12;
+if (too4 > 10) {
+  console.log(too4, "нь 10-с их");
+}
+if (too4 < 10) {
+  console.log(too4, "нь 10-с бага");
+}
+// 13. хоёр тоо тэнцүү эсэхийг шалгах - "тэнцүү" эсвэл "ялгаатай".
+let too5 = 20;
+too6 = 20;
+if (too5 === too6) {
+  console.log("хоёр тоо тэнцүү");
+} else {
+  console.log("хоёр тоо ялгаатай");
+}
+// 14. тоог 100-аас их, 0-ээс бага эсэхийг шалгах.
+let too7 = 90;
+if (too7 > 100) {
+  console.log("100-c их");
+} else console.log("100-c бага");
+
+if (too7 > 0) {
+  console.log("0-c их");
+} else console.log("0-c бага");
+// 15. тоог 10%, 20% эсвэл 30% өсгөх.
+const too8 = 100;
+let huvi = 10;
+let hariu;
+if (huvi === 10) {
+  hariu = too8 + too8 * 0.1;
+  console.log(too8 + "тоог 10%-р нэмсэн" + hariu);
+}
+if (huvi === 20) {
+  hariu = too8 + too8 * 0.2;
+  console.log(too8 + "тоог 20%-р нэмсэн" + hariu);
+}
+if (huvi === 30) {
+  hariu = too8 + too8 * 0.3;
+  console.log(too8 + "тоог 30%-р нэмсэн" + hariu);
+}
+// 16. тоог 100-аас хэтэрвэл 100 болгож хэвлэх.
