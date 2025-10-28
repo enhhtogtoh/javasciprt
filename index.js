@@ -143,20 +143,50 @@
 // console.log(max);
 
 // 1. 2 тоог оруулж ихийг нь хэвлэх.
-const a = 40;
-const b = 50;
+const a = 500;
+const b = 100;
 let ih = 1;
-if (ih < 45) {
+if (ih < a) {
   ih = a;
 }
-if (ih < 45) {
+if (ih < b) {
   ih = b;
 }
 console.log(ih);
 // 2. тоог тэгш содгой эсэхийг шалга.
-const too = 6;
-console.log(too % 2 === 0);
+const too = 20;
+if (too % 2 === 0) {
+  console.log("тэгш");
+}
+if (too % 2 === 1) {
+  console.log("сондгой");
+}
 // 3. 3 ширхэг тоон дундах хамгийн их/хамгийн бага утгыг хэвлэ.
+const ppp1 = 21;
+const ppp2 = 22;
+const ppp3 = 25;
+let min = ppp1;
+if (min > ppp1) {
+  min = ppp1;
+}
+if (min > ppp2) {
+  min = ppp2;
+}
+if (min > ppp3) {
+  min = ppp3;
+}
+let max = ppp1;
+if (max < ppp1) {
+  max = ppp1;
+}
+if (max < ppp2) {
+  max = ppp2;
+}
+if (max < ppp3) {
+  max = ppp3;
+}
+console.log(max + " хамгийн их нь");
+console.log(min + " хамгийн бага нь");
 // 4. стрингийн уртыг хэвлэх.
 const string = "hello_world";
 console.log(string.length);
@@ -188,12 +218,12 @@ console.log(too1 % 2 === 0 && "эерэг");
 console.log(too2 % 2 === 1 && "сөрөг");
 console.log(too3 % 2 === 0 && "тэг");
 // 12. тоог 10-аас их эсэхийг шалгах.
-const too4 = 12;
+const too4 = 90;
 if (too4 > 10) {
-  console.log(too4, "нь 10-с их");
+  console.log(too4 + " нь 10-с их");
 }
 if (too4 < 10) {
-  console.log(too4, "нь 10-с бага");
+  console.log(too4 + " нь 10-с бага");
 }
 // 13. хоёр тоо тэнцүү эсэхийг шалгах - "тэнцүү" эсвэл "ялгаатай".
 let too5 = 20;
@@ -213,19 +243,53 @@ if (too7 > 0) {
   console.log("0-c их");
 } else console.log("0-c бага");
 // 15. тоог 10%, 20% эсвэл 30% өсгөх.
-const too8 = 100;
+const too8 = 250;
 let huvi = 10;
 let hariu;
 if (huvi === 10) {
   hariu = too8 + too8 * 0.1;
-  console.log(too8 + "тоог 10%-р нэмсэн" + hariu);
+  console.log(too8 + " тоог 10%-р нэмээд " + hariu);
 }
 if (huvi === 20) {
   hariu = too8 + too8 * 0.2;
-  console.log(too8 + "тоог 20%-р нэмсэн" + hariu);
+  console.log(too8 + " тоог 20%-р нэмээд " + hariu);
 }
 if (huvi === 30) {
   hariu = too8 + too8 * 0.3;
-  console.log(too8 + "тоог 30%-р нэмсэн" + hariu);
+  console.log(too8 + " тоог 30%-р нэмээд " + hariu);
 }
 // 16. тоог 100-аас хэтэрвэл 100 болгож хэвлэх.
+let too9 = 200;
+if (too9 > 100) {
+  too9 = 100;
+}
+console.log(too9);
+// 17. хоёр тэмдэгт ижил эсэхийг шалгах === ашиглах.
+let temdeg = "&";
+temdeg1 = "&";
+if (temdeg === temdeg1) {
+  console.log("2 тэмдэг ижил");
+} else {
+  console.log("2 тэмдэг ялгаатай");
+}
+// 18. хоёр оронтой тооны цифрүүдийг сольж урвуулах.
+// 19. тоо сөрөг бол эерэг болгож, эерэг бол хэвээр үлдээх.
+const too10 = 42;
+// 20. 1970.01.01 -ээс яг одоог хүртэл хэдэн жил, сар, өдөр, цаг, минут, секунд, дооль, милисекунд өнгөрсөнг ол.
+// 21. Дугаарын хязгаарлалтаар машин чинь хэд хэд дэх өдөр явахгүйг хэвлэ.
+let dugaar = 2;
+if (dugaar === 1 || dugaar === 6) {
+  console.log("Даваа гарагт явахгүй");
+}
+if (dugaar === 2 || dugaar === 7) {
+  console.log("Мягмар гарагт явахгүй");
+}
+if (dugaar === 3 || dugaar === 8) {
+  console.log("Лхагва гарагт явахгүй");
+}
+if (dugaar === 4 || dugaar === 9) {
+  console.log("Пүрэв гарагт явахгүй");
+}
+if (dugaar === 5 || dugaar === 0) {
+  console.log("Баасан гарагт явахгүй");
+}
