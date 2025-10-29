@@ -200,6 +200,15 @@ console.log(string2.toUpperCase());
 const string3 = "banana";
 // 8. тоог 3-аар болон 5-аар хуваагддаг эсэхийг шалгах.3-т хуваагдвал Fizz, 5-т хуваагдвал Buzz, хоёуланд нь хуваагддаг бол FizzBuzz гэж хэвлэ.
 let tooo = 15;
+if (tooo % 3 === 0 && tooo % 5 === 0) {
+  console.log("FizzBuzz");
+} else if (tooo % 3 === 0) {
+  console.log("Fizz");
+} else if (tooo % 5 === 0) {
+  console.log("Buzz");
+} else {
+  console.log(tooo + " нь 3 болон 5д хуваагдахгүй.");
+}
 // 9. хоёр string-ийг нэгтгэх a = Hello b = World.
 const string4 = "Hello";
 const string5 = "World";
@@ -277,26 +286,43 @@ if (temdeg === temdeg1) {
   console.log("2 тэмдэг ялгаатай");
 }
 // 18. хоёр оронтой тооны цифрүүдийг сольж урвуулах.
+let p = 56;
+if (p >= 10 && p <= 99) {
+  p % 10;
+  parseInt(p / 10);
+}
+// 19. тоо сөрөг бол эерэг болгож, эерэг бол хэвээр үлдээх.
 let eyreg = -57;
 eyreg = eyreg < 0 ? -eyreg : eyreg;
 console.log(eyreg);
-// 19. тоо сөрөг бол эерэг болгож, эерэг бол хэвээр үлдээх.
-const too10 = 42;
 // 20. 1970.01.01 -ээс яг одоог хүртэл хэдэн жил, сар, өдөр, цаг, минут, секунд, дооль, милисекунд өнгөрсөнг ол.
+
 // 21. Дугаарын хязгаарлалтаар машин чинь хэд хэд дэх өдөр явахгүйг хэвлэ.
-let dugaar = 8;
+let dugaar = 0;
 if (dugaar === 1 || dugaar === 6) {
   console.log("Даваа гарагт явахгүй");
-}
-if (dugaar === 2 || dugaar === 7) {
+} else if (dugaar === 2 || dugaar === 7) {
   console.log("Мягмар гарагт явахгүй");
-}
-if (dugaar === 3 || dugaar === 8) {
+} else if (dugaar === 3 || dugaar === 8) {
   console.log("Лхагва гарагт явахгүй");
-}
-if (dugaar === 4 || dugaar === 9) {
+} else if (dugaar === 4 || dugaar === 9) {
   console.log("Пүрэв гарагт явахгүй");
-}
-if (dugaar === 5 || dugaar === 0) {
+} else if (dugaar === 5 || dugaar === 0) {
   console.log("Баасан гарагт явахгүй");
+}
+let garag = 7;
+if (garag === 1) {
+  console.log("Monday");
+} else if (garag === 2) {
+  console.log("Tuesday");
+} else if (garag === 3) {
+  console.log("Wednesday");
+} else if (garag === 4) {
+  console.log("Thursday");
+} else if (garag === 5) {
+  console.log("Friday");
+} else if (garag === 6) {
+  console.log("Saturday");
+} else if (garag === 7) {
+  console.log("Sunday");
 }
