@@ -286,13 +286,28 @@ if (temdeg === temdeg1) {
   console.log("2 тэмдэг ялгаатай");
 }
 // 18. хоёр оронтой тооны цифрүүдийг сольж урвуулах.
-let p = 56;
-if (p >= 10 && p <= 99) {
-  p % 10;
-  parseInt(p / 10);
-}
+let p = 78;
+let o = Math.floor(p / 10);
+let r = p % 10;
+let result = r * 10 + o;
+console.log(result);
+// 3 оронтой тооны цифрүүдийг сольж урвуулах.
+let pp = 456;
+let oo = Math.floor(pp % 10);
+let rr = Math.floor((pp % 100) / 10);
+let tt = Math.floor(pp / 100);
+let result1 = oo * 100 + rr * 10 + tt;
+console.log(result1);
+// 4 оронтой тооны цифрүүдийг сольж урвуулах.
+let yy = 1234;
+let qw = Math.floor(yy % 10);
+let qe = Math.floor((yy % 100) / 10);
+let qr = Math.floor((yy % 1000) / 100);
+let qt = Math.floor(yy / 1000);
+let result2 = qw * 1000 + qe * 100 + qr * 10 + qt;
+console.log(result2);
 // 19. тоо сөрөг бол эерэг болгож, эерэг бол хэвээр үлдээх.
-let eyreg = -57;
+let eyreg = -78;
 eyreg = eyreg < 0 ? -eyreg : eyreg;
 console.log(eyreg);
 // 20. 1970.01.01 -ээс яг одоог хүртэл хэдэн жил, сар, өдөр, цаг, минут, секунд, дооль, милисекунд өнгөрсөнг ол.
