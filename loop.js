@@ -138,14 +138,14 @@
 // }
 
 // #21. Хэрвээ тоо 3-т хуваагдвал “Fizz”, 5-т хуваагдвал “Buzz” гэж хэвлэх
-let n = 10;
-for (a = 1; a <= n; a++) {}
-if (n % 3 === 0) {
-  console.log("Fizz");
-}
-if (n % 5 === 0) {
-  console.log("Buzz");
-}
+// let n = 10;
+// for (a = 1; a <= n; a++) {}
+// if (n % 3 === 0) {
+//   console.log("Fizz");
+// }
+// if (n % 5 === 0) {
+//   console.log("Buzz");
+// }
 
 // #22. 1–100 хүртэлх 7-д хуваагддаггүй тоонуудыг хэвлэх.
 // for (a = 1; a <= 100; a++) {
@@ -171,12 +171,17 @@ if (n % 5 === 0) {
 // }
 
 // #25. 1–20 хүртэлх тоонууд дундаас анхны тоонуудыг (prime numbers) ол.
-// for (a = 1; a <= 20; a++) {
-//   if (a % 1 === 0 && a % a === 0) {
-//     // console.log(a);
-//   }
-//   console.log(a);
-// }
+
+const num = 4;
+let isPrime = true;
+
+for (a = 2; a <= Math.sqrt(num); a++) {
+  if (num % a === 0) {
+    isPrime = false;
+    break;
+  }
+}
+console.log(isPrime);
 
 // #26. 1–50 хүртэлх бүх сондгой тооны кубын нийлбэрийг ол.
 // let sum = 0;
