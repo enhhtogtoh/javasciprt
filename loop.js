@@ -170,18 +170,17 @@
 //   }
 // }
 
-// #25. 1–20 хүртэлх тоонууд дундаас анхны тоонуудыг (prime numbers) ол.
+// #25. 1–20 хүртэлх тоонууд дундаас анхны тоонуудыг (prime numbers) ол. /багшаар заалгав/
 
-const num = 4;
-let isPrime = true;
-
-for (a = 2; a <= Math.sqrt(num); a++) {
-  if (num % a === 0) {
-    isPrime = false;
-    break;
-  }
-}
-console.log(isPrime);
+// const num = 7;
+// let isPrime = true;
+// for (a = 2; a <= Math.sqrt(num); a++) {
+//   if (num % a === 0) {
+//     isPrime = false;
+//     break;
+//   }
+// }
+// console.log(isPrime);
 
 // #26. 1–50 хүртэлх бүх сондгой тооны кубын нийлбэрийг ол.
 // let sum = 0;
