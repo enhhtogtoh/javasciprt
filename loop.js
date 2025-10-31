@@ -198,3 +198,115 @@
 //     console.log(a);
 //   }
 // }
+
+// #1. 1-ээс 10 хүртэлх тооны квадратуудыг хэвлэ.
+// let sum = 1;
+// for (a = 1; a <= 10; a++) {
+//   sum = a ** 2;
+//   console.log(sum);
+// }
+
+// #2. Өөрийн нэрийг бичиж эсрэгээр нь хэвлэ. Жишээ нь: Сүх -> Хүс
+const ner = "Suh";
+
+// #3.  Өгөгдсөн жил зуны олимпийн жил мөн эсэхийг ол. 1896 онд эхэлсэн.
+// let year = 2003;
+// let olympic = false;
+// for (a = 1896; a <= year; a += 4) {
+//   if (a === year) {
+//     olympic = true;
+//   }
+// }
+// if (olympic) {
+//   console.log(" зуны олимп болсон");
+// } else {
+//   console.log(" зуны олимп болоогүй");
+// }
+
+// #4. Өгөгдсөн жил өвлийн олимпийн жил мөн эсэхийг ол. 1924, 1994 онд эхэлсэн.
+// let year = 2030;
+// let olympic = false;
+// for (a = 1924; a <= 1992; a += 4) {
+//   if (a === year) olympic = true;
+// }
+
+// for (a = 1994; a <= year; a += 4) if (a === year) olympic = true;
+// if (olympic) {
+//   console.log(" өвлийн олимп болсон");
+// } else {
+//   console.log(" өвлийн олимп болоогүй");
+// }
+
+// #5. Хэрэглэгчээс сарын дугаар (1-12) аваад, улирал хэвлэнэ:
+// let month = 10;
+// for (a = 1; a <= 12; a++) {
+//   if (a === month)
+//     if (a >= 3 && a <= 5) {
+//       console.log(month + " сар нь хаврын улирал");
+//     } else if (a >= 6 && a <= 8) {
+//       console.log(month + " сар нь зуны улирал");
+//     } else if (a >= 9 && a <= 11) {
+//       console.log(month + " сар нь намрын улирал");
+//     } else console.log(month + " сар нь өвлийн улирал");
+// }
+
+// #6. Хэрэглэгчээс шатахууны төрлийг (92, 95, D) болон литр авах бөгөөд үнийг тооцно:
+// let turul = "D";
+// let litr = 10;
+// if (turul === "92") {
+//   litr = litr * 2500;
+//   console.log(turul + ": " + litr + "₮" + " төгрөг");
+// } else if (turul === "95") {
+//   litr = litr * 3000;
+//   console.log(turul + ": " + litr + "₮" + " төгрөг");
+// } else if (turul === "D") {
+//   litr = litr * 2200;
+//   console.log(turul + ": " + litr + "₮" + " төгрөг");
+// } else {
+//   console.log(" тийм бинзен байхгүй");
+// }
+
+// #7. yearOfBirth гэсэн хувьсагчид гараас төрсөн оныг ав. Тухайн оноос тухайн хүний насыг нь бодож гаргаад үр дүнгээ old гэсэн хувьсагчид оноо. Насанд нь харгалзах утгыг хэвлэ.
+// let birth = 2007;
+// let year = 2025;
+// let old = year - birth;
+// if (old > 0 && old <= 1) {
+//   console.log(old + " настай" + " Infant");
+// } else if (old > 1 && old <= 3) {
+//   console.log(old + " настай" + " Toddler");
+// } else if (old > 3 && old <= 5) {
+//   console.log(old + " настай" + " Preschool");
+// } else if (old > 5 && old <= 12) {
+//   console.log(old + " настай" + " Gradeschooler");
+// } else if (old > 12 && old <= 18) {
+//   console.log(old + " настай" + " Teen");
+// } else if (old > 18 && old <= 21) {
+//   console.log(old + " настай" + " Yound adult");
+// } else if (old > 21) {
+//   console.log(old + " настай" + " Adult");
+// } else {
+//   console.log("нас тооцоолох боломжгүй");
+// }
+
+//  #1. Armstrong тоо мөн үгүйг шалгах. 153 -> 1**3 + 5**3 + 3**3 = 153
+// let num = 370;
+// let one = (num % 10) ** 3;
+// let two = Math.floor((num % 100) / 10) ** 3;
+// let three = Math.floor(num / 100) ** 3;
+// let total = three + two + one;
+// if (num === total) {
+//   console.log("true");
+// } else {
+//   console.log("false");
+// }
+
+//  #2. N хүртэлх бүх тоог * дүрсээр график үүсгэх
+// *
+// **
+// ***
+// ****
+// *****
+// let n = 4;
+// for (a = 1; a <= n; a++) {
+//   console.log(a);
+// }
