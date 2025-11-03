@@ -1,3 +1,4 @@
+// ------------------while------------------
 // #1.  Тооны цифрийн нийлбэрийг олох. (let n = 1234)
 // let n = 1234;
 // let sum = 0;
@@ -75,15 +76,59 @@
 // }
 // console.log(sum);
 
-// do while
+// ------------------do while----------------
 
 // #1. 1–10 хооронд тоо авах (Math.random -> 1-100)
-// let randomNum = Math.floor(Math.random() * 10) + 1;
+// let randomNum;
 // do {
-//   console.log(randomNum);
-// } while (randomNum >= 10);
+//   randomNum = Math.floor(Math.random() * 10) + 1;
+// } while (false);
+// console.log(randomNum);
 
 // #2. Сөрөг input орох хүртэл нийлбэр гаргах (let sum3 = 0; let input = 5;)
 // let input = 5;
-// let sum = 3;
-// let sum1 = 1;
+// let sum = 0;
+// do {
+//   input = Number(prompt("too oruulna uu (surug bol zogsono):"));
+//   if (input >= 0) {
+//     sum += input;
+//   }
+// } while (input >= 0);
+// console.log("niilber:", sum);
+
+// let input = -8;
+// let sum = 0;
+// do {
+//   input = Number(prompt("too oruulna uu (eyreg bol zogsono"));
+//   if (input <= 0);
+//   sum -= input;
+// } while (input <= 0);
+// console.log("niilber", sum);
+
+// #3. 3-ийн хүрд хэвлэх
+let num = 3;
+let i = 1;
+do {
+  console.log(num + " x " + i + " = " + num * i);
+  i++;
+} while (i <= 10);
+
+// #5. Нууц үг шалгах (3 оролдлого) (let password = "your name“, let attempt; let tries = 0; const maxTries = 3;) prompt ашиглах
+let password = "passs";
+let attempt;
+let tries = 0;
+const maxTries = 3;
+do {
+  attempt = prompt("nuuts ug oruulna uu:");
+  tries++;
+
+  if (attempt === password) {
+    console.log("nuuts ug zuv baina!");
+    break;
+  } else {
+    console.log("buruu nuuts ug. uldsen oroldlogo" + (maxTries - tries));
+  }
+} while (tries < maxTries);
+if (attempt !== password) {
+  console.log("ta 3 udaa buruu oruulsan tul nevtreh bolomjgui");
+}
