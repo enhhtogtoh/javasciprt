@@ -78,7 +78,7 @@
 // do while
 
 // #1. 1–10 хооронд тоо авах (Math.random -> 1-100)
-let randomNum = Math.floor(Math.random() * 10) + 1;
+// let randomNum = Math.floor(Math.random() * 10) + 1;
 // do {
 //   console.log(randomNum);
 // } while (randomNum >= 10);
