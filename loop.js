@@ -306,7 +306,27 @@ const ner = "Suh";
 // ***
 // ****
 // *****
-// let n = 4;
+// let n = 5;
+// let od = "";
 // for (a = 1; a <= n; a++) {
-//   console.log(a);
+//   od = od + "*";
+//   console.log(od);
 // }
+
+// #3. 1-ээс N хүртэл бүх тоог хэвлэх, тэгш, сондгой ялгах, нийлбэрийг тооцоолох
+// 1-ээс N хүртэлх бүх тоог хэвлэх, тэгш болон сондгойг ялгаад, эцэст нь тэгшийн нийлбэр, сондгойгийн нийлбэр-ийг хэвлэх.
+// let n = 10;
+// let tegsh = 0;
+// let sondgoi = 0;
+// for (a = 1; a <= n; a++) {
+//   //   console.log(a);
+//   if (a % 2 === 0) {
+//     // console.log(a);
+//     tegsh = tegsh + a;
+//   } else {
+//     // console.log(a);
+//     sondgoi = sondgoi + a;
+//   }
+// }
+// console.log(tegsh);
+// console.log(sondgoi);
