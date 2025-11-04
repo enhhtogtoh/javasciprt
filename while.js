@@ -106,29 +106,29 @@
 // console.log("niilber", sum);
 
 // #3. 3-ийн хүрд хэвлэх
-let num = 3;
-let i = 1;
-do {
-  console.log(num + " x " + i + " = " + num * i);
-  i++;
-} while (i <= 10);
+// let num = 3;
+// let i = 1;
+// do {
+//   console.log(num + " x " + i + " = " + num * i);
+//   i++;
+// } while (i <= 10);
 
 // #5. Нууц үг шалгах (3 оролдлого) (let password = "your name“, let attempt; let tries = 0; const maxTries = 3;) prompt ашиглах
-let password = "passs";
-let attempt;
-let tries = 0;
-const maxTries = 3;
-do {
-  attempt = prompt("nuuts ug oruulna uu:");
-  tries++;
+// let password = "passs";
+// let attempt;
+// let tries = 0;
+// const maxTries = 3;
+// do {
+//   attempt = prompt("nuuts ug oruulna uu:");
+//   tries++;
 
-  if (attempt === password) {
-    console.log("nuuts ug zuv baina!");
-    break;
-  } else {
-    console.log("buruu nuuts ug. uldsen oroldlogo" + (maxTries - tries));
-  }
-} while (tries < maxTries);
-if (attempt !== password) {
-  console.log("ta 3 udaa buruu oruulsan tul nevtreh bolomjgui");
-}
+//   if (attempt === password) {
+//     console.log("nuuts ug zuv baina!");
+//     break;
+//   } else {
+//     console.log("buruu nuuts ug. uldsen oroldlogo" + (maxTries - tries));
+//   }
+// } while (tries < maxTries);
+// if (attempt !== password) {
+//   console.log("ta 3 udaa buruu oruulsan tul nevtreh bolomjgui");
+// }
