@@ -395,4 +395,16 @@ const employees = [
   { name: "Bayar", salary: 1200, bonus: 100, taxRate: 0.15 },
 ];
 
-let;
+let max = employees[0];
+let maxEmployees =
+  employees[0].salary + employees[0].bonus - employees[0].taxRate;
+
+for (i = 1; i < employees.length; i++) {
+  const total = employees[i].salary + employees[i].bonus - employees[i].taxRate;
+  if (total > maxEmployees) {
+    maxEmployees = total;
+    max = employees[i];
+  }
+  // console.log(max);
+}
+console.log(max.name);
