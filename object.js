@@ -389,22 +389,132 @@
 // }
 
 // #14. Tax хассан нийт цалин хамгийн их ажилтны нэрийг ол.
-const employees = [
-  { name: "Amgalan", salary: 1000, bonus: 200, taxRate: 0.1 },
-  { name: "Nomin", salary: 1500, bonus: 300, taxRate: 0.2 },
-  { name: "Bayar", salary: 1200, bonus: 100, taxRate: 0.15 },
+
+// const employees = [
+//   { name: "Amgalan", salary: 1000, bonus: 200, taxRate: 0.1 },
+//   { name: "Nomin", salary: 1500, bonus: 300, taxRate: 0.2 },
+//   { name: "Bayar", salary: 1200, bonus: 100, taxRate: 0.15 },
+// ];
+
+// let max = employees[0];
+// let maxEmployees =
+//   employees[0].salary + employees[0].bonus - employees[0].taxRate;
+
+// for (i = 1; i < employees.length; i++) {
+//   const total = employees[i].salary + employees[i].bonus - employees[i].taxRate;
+//   if (total > maxEmployees) {
+//     maxEmployees = total;
+//     max = employees[i];
+//   }
+//   // console.log(max);
+// }
+// console.log(max.name);
+
+// #15. Category = “Plastic” орлогын нийлбэрийг ол.
+
+// const products = [
+//   { title: "Uut", price: 500, sold: 10, category: "Plastic" },
+//   { title: "Sav", price: 800, sold: 5, category: "Metal" },
+//   { title: "Savh", price: 600, sold: 12, category: "Plastic" },
+// ];
+
+// let sum = {};
+
+// for (i = 0; i < products.length; i++) {
+//   const total = products[i];
+//   const rev = total.price * total.sold;
+//   if (sum[total.category] === undefined) {
+//     sum[total.category] = rev;
+//   } else {
+//     sum[total.category] += rev;
+//   }
+// }
+// console.log(sum);
+
+// #16. Total revenue 10000-с их номыг ол.
+
+// const books = [
+//   { title: "Mongoliin tuuh", price: 1200, sold: 10, discount: 0.1 },
+//   { title: "Gazar zui", price: 1500, sold: 5, discount: 0.05 },
+//   { title: "Uls tur", price: 1000, sold: 20, discount: 0.2 },
+// ];
+
+// let max = books[0];
+// let maxBooks = books[0].price * books[0].sold * (1 - books[0].discount);
+
+// for (i = 0; i < books.length; i++) {
+//   const total = books[i].price * books[i].sold * (1 - books[i].discount);
+//   if (total > 10000) {
+//     maxBooks = total;
+//     max = books[i];
+//     console.log(max);
+//   }
+// }
+// console.log(max);
+
+// #17. 80-с дээш оноотой бүх subject-ийг массив болгож ав.
+
+// const students = [
+//   { name: "Bat", math: 70, english: 80, science: 90 },
+//   { name: "Saraa", math: 60, english: 85, science: 95 },
+//   { name: "Nomin", math: 100, english: 90, science: 80 },
+// ];
+
+// let newArray = [];
+
+// for (i = 0; i < students.length; i++) {
+//   const max = students[i];
+//   if (max.math > 80) {
+//     newArray.push(max.name, max.math);
+//   }
+//   if (max.english > 80) {
+//     newArray.push(max.name, max.english);
+//   }
+//   if (max.science > 80) {
+//     newArray.push(max.name, max.science);
+//   }
+//   // console.log(newArray);
+// }
+// console.log(newArray);
+
+// #18. Active = true ажилтнуудын нэрийг department-гээр групп үүсгээрэй.
+
+// const employees = [
+//   { name: "Amgalan", salary: 1000, active: true, department: "IT" },
+//   { name: "Nomin", salary: 1500, active: false, department: "HR" },
+//   { name: "Bayar", salary: 1200, active: true, department: "IT" },
+// ];
+
+// let grouped = {};
+
+// for (i = 0; i < employees.length; i++) {
+//   const emp = employees[i];
+//   if (emp.active) {
+//     if (!grouped[emp.department]) {
+//       grouped[emp.department] = [];
+//     }
+//     grouped[emp.department].push(emp.name);
+//   }
+// }
+// console.log(grouped);
+
+// #19. Price / sold харьцаа хамгийн бага бүтээгдэхүүнийг ол.
+const products = [
+  { title: "Uut", price: 500, sold: 10, category: "Plastic" },
+  { title: "Sav", price: 800, sold: 5, category: "Metal" },
+  { title: "Savh", price: 600, sold: 12, category: "Plastic" },
 ];
 
-let max = employees[0];
-let maxEmployees =
-  employees[0].salary + employees[0].bonus - employees[0].taxRate;
+let min = Infinity;
+let minp = "";
 
-for (i = 1; i < employees.length; i++) {
-  const total = employees[i].salary + employees[i].bonus - employees[i].taxRate;
-  if (total > maxEmployees) {
-    maxEmployees = total;
-    max = employees[i];
+for (i = 0; i < products.length; i++) {
+  const ratio = products[i].price / products[i].sold;
+  if (ratio < min) {
+    min = ratio;
+    minp = products[i].title;
+    // console.log(minp);
   }
-  // console.log(max);
+  // console.log(minp.title);
 }
-console.log(max.name);
+console.log(minp);
