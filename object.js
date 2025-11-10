@@ -499,22 +499,58 @@
 // console.log(grouped);
 
 // #19. Price / sold харьцаа хамгийн бага бүтээгдэхүүнийг ол.
-const products = [
-  { title: "Uut", price: 500, sold: 10, category: "Plastic" },
-  { title: "Sav", price: 800, sold: 5, category: "Metal" },
-  { title: "Savh", price: 600, sold: 12, category: "Plastic" },
-];
+// const products = [
+//   { title: "Uut", price: 500, sold: 10, category: "Plastic" },
+//   { title: "Sav", price: 800, sold: 5, category: "Metal" },
+//   { title: "Savh", price: 600, sold: 12, category: "Plastic" },
+// ];
 
-let min = Infinity;
-let minp = "";
+// let min = Infinity;
+// let minp = "";
 
-for (i = 0; i < products.length; i++) {
-  const ratio = products[i].price / products[i].sold;
-  if (ratio < min) {
-    min = ratio;
-    minp = products[i].title;
-    // console.log(minp);
-  }
-  // console.log(minp.title);
-}
-console.log(minp);
+// for (i = 0; i < products.length; i++) {
+//   const ratio = products[i].price / products[i].sold;
+//   if (ratio < min) {
+//     min = ratio;
+//     minp = products[i].title;
+//   }
+// }
+// console.log(minp);
+
+// #20. Rating * pages дундаж хамгийн их номыг ол.
+// const books = [
+//   { title: "Mongoliin tuuh", pages: 120, rating: 4.5 },
+//   { title: "Gazar zui", pages: 150, rating: 4.8 },
+//   { title: "Uls tur", pages: 200, rating: 4.2 },
+// ];
+
+// let max = books[0];
+// let maxBooks = books[0].pages - books[0].rating;
+
+// for (i = 0; i < books.length; i++) {
+//   const total = books[i].pages - books[i].rating;
+//   if (total > maxBooks) {
+//     maxbooks = total;
+//     max = books[i];
+//   }
+// }
+// console.log(max.title);
+
+// #21. Хамгийн их оноотой subject-тай оюутны нэрийг ол.
+// const students = [
+//   { name: "Bat", math: 70, english: 80, science: 90 },
+//   { name: "Saraa", math: 60, english: 85, science: 95 },
+//   { name: "Naran", math: 100, english: 90, science: 80 },
+// ];
+
+// let max = students[0];
+// let maxStudents = students[0].math + students[0].english + students[0].science;
+
+// for (i = 0; i < students.length; i++) {
+//   const total = students[i].math + students[i].english + students[i].science;
+//   if (total > maxStudents) {
+//     maxStudents = total;
+//     max = students[i];
+//   }
+// }
+// console.log(max.name);
