@@ -222,13 +222,13 @@
 // };
 
 // #20. 1970.01.01 -ээс яг одоог хүртэл хэдэн он, сар, өдөр, цаг, минут, секунд, дооль, милисекунд өнгөрсөнг ол.
-const millsecond = (a) => {
-  const now = new Date();
-  const start = new Date("1970.01.01T00:00:00");
-  const nowStart = now - start;
-  //   const newDate =
-};
-console.log(new Date());
+// const millsecond = (a) => {
+//   const now = new Date();
+//   const start = new Date("1970.01.01T00:00:00");
+//   const nowStart = now - start;
+//   //   const newDate =
+// };
+// console.log(new Date());
 
 // #21. Дугаарын хязгаарлалтаар машин чинь хэд хэд дэх өдөр явахгүйг хэвлэнэ.
 // const weekend = (day) => {
@@ -238,3 +238,25 @@ console.log(new Date());
 //   if (day === 4 || day === 9) return "Thursday-д явахгүй";
 //   if (day === 5 || day === 0) return "Friday-д явахгүй";
 // };
+
+// -------------array------------------
+// #1. ["🥩", "🌾", "🥔", "🥕", "🥬"] array iin length iig ol.
+// const friuts = (a) => {
+//   return a.length;
+// };
+
+// #2. 10 urttai number array uusge.
+// const numbers = (a) => {
+//   return a.length;
+// };
+
+// #3. 5 urttai string array uusge.
+// const stringArray = (a) => {
+//   return a.length;
+// };
+
+// #4. Массивын эхний ба сүүлийн элементийг харуул.
+const numbersMassive = (a) => {
+  const firstNumber = length;
+};
+console.log(numbersMassive([1, 2, 3, 4, 5, 6, 7]));
