@@ -78,19 +78,41 @@
 
 // #2. "a,b,c,d" → бүх , ийг  - тэмдэгтээр солино
 // const changeLetter = (text) => {
-//   const changeTheLetter = text.replaceAll("a,b,c,d", "----");
+//   const changeTheLetter = text.replaceAll(",", "-");
+
 //   return changeTheLetter;
 // };
 // const hariu = changeLetter("a,b,c,d");
 // console.log(hariu);
 
 // #3. JavaScript хэдэн гийгүүлэгч хэдэн эгшиг байгааг тоол.
-const letterConsonant = (text) => {
-  const vowels = "aeiou";
-  let vowelsCount = 0;
-  let consonantCount = 0;
+// const letterConsonant = (text) => {
+//   const vowels = "aeiou";
+//   let egshig = 0;
+//   let giiguulegc = 0;
 
-  for (i = 0; i < text.length; i++) {
-    const total = text[i].toLowerCase();
-  }
-};
+//   for (i = 0; i < text.length; i++) {
+//     const total = text[i].toLowerCase();
+//     if (vowels.includes(total)) {
+//       egshig++;
+//     } else if (/[a-z]/.test(total)) {
+//       giiguulegc++;
+//     }
+//   }
+//   return { egshig, giiguulegc };
+// };
+// const hariu = letterConsonant("Javascript");
+// console.log(hariu);
+
+// #4. "1234567890" сүүлийн 4 оос бусад тоог нь * оор орлуул
+// const numbers = (num) => {
+//   const str = num.toString();
+//   const str1 = str.slice(-4);
+//   const pro = "*".repeat(str.length - 4) + str1;
+//   return pro;
+// };
+// const hariu = numbers(1234567890);
+// console.log(hariu);
+
+// #5. Өгүүлбэр доторх хамгийн урт үгийг ол.
+// const words = (text) => {};
