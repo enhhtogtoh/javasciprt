@@ -171,7 +171,9 @@
 
 // #16. checkLogin(username, password, callback) — зөв хэрэглэгчийг шалгаад callback-д функцээр true false хэвлэ.
 
-const checkLogin = (username, password, callback) => {};
+// const checkLogin = (username, password, callback) => {
+
+// };
 
 // #17. isAdult(age, callback) — нас 18-аас дээш бол true-г callback-д өг.
 // #18. checkNumberType(num, callback) — тоо сондгой эсвэл тэгш гэдгийг callback-д өг.
