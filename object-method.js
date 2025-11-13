@@ -14,7 +14,7 @@
 // #2. Объект дотор байгаа name шинж чанарын утгыг хэвлэ.
 
 // const object = { name: "Bat", age: 22, city: "Ub" };
-// console.log(properties.name);
+// console.log(object.name);
 
 // #3. person.age утгыг шинэчлээд 30 болго.
 
@@ -74,16 +74,61 @@
 
 // #11. for...in давталт ашиглан объектын бүх түлхүүр болон утгуудыг хэвлэ.
 
-const person = { name: "Bat", age: 22, city: "Ub" };
-for (let key in person) {
-  console.log(key);
-}
+// const person = { name: "Bat", age: 22, city: "Ub" };
+// for (let key in person) {
+//   console.log(key + ":", person[key]);
+// }
 
 // #12. Object.freeze() ашиглан объектын утгыг өөрчлөх боломжгүй болгож оролдоод турш.
+
+// const person = { name: "Bat", age: 22, city: "Ub" };
+// const newObject = Object.freeze(person);
+// person.age = 50;
+// console.log(person);
+
 // #13. Хоёр объектын утгуудыг spread (...) ашиглан нэг шинэ объект үүсгэ.
+
+// const user1 = { name: "Bat", age: 22, city: "Ub" };
+// const user2 = { name: "Saraa", age: 23, city: "Darkhan" };
+// const copiedObject = [...Object.values(user1), ...Object.values(user2)];
+// console.log(copiedObject);
+
 // #14. Хоосон объект үүсгээд дараалан өөрийн хүссэн 3 properties g  нэм.
+
+// const user = {};
+// const firstKey = "name:";
+// user[firstKey] = "Bat";
+// const secondKey = "age:";
+// user[secondKey] = 22;
+// const thirthKey = "city:";
+// user[thirthKey] = "Ub";
+// console.log(user);
+
 // #15. Нэг объектын тодорхой утгыг өөр объект руу хуулах (clone) үйлдэл хийгээрэй.
+
+// const user = { name: "Bat", age: 22, city: "Ub" };
+// const person = { ...user };
+// console.log(person);
+
 // #16. Объектын бүх түлхүүрийг length-ээр тоол.
+
+// const user = { name: "Bat", age: 22, city: "Ub" };
+// const userCount = Object.keys(user).length;
+
+// console.log(userCount);
+
 // #17. Object.hasOwnProperty() ашиглан user объектод password байгаа эсэхийг шалга.
+
+// const user = { name: "Bat", age: 22, city: "Ub", password: "hhshsh112" };
+// const pass = user.hasOwnProperty("password");
+// console.log(pass);
+
 // #18. JSON.stringify() ашиглан объектоо string болгон хөрвүүл.
+
+// const user1 = { name: "Bat", age: 22, city: "Ub" };
+// const string = JSON.stringify(user1);
+// console.log(string);
+
 // #19. JSON.parse() ашиглан string-ийг буцааж объект болгож хөрвүүл.
+
+// console.log(JSON.parse(string));
