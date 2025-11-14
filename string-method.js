@@ -116,3 +116,99 @@
 
 // #5. Өгүүлбэр доторх хамгийн урт үгийг ол.
 // const words = (text) => {};
+
+// #1. Доорх үгсийг урвуу болгох. Эхний болон сүүлийн үгийг өөрчлөхгүй. Жишээ: Оролт: "Javascript бол үнэхээр сонирхолтой хэл", Гаралт: "Javascript лоб рээхнеүн йотлохронис хэл"
+
+// const reverseWord = (str) => {
+//   const splitted = str.split(" ");
+//   const words = splitted.slice(1, 4);
+
+//   for (let i = 0; i < words.length; i++) {
+//     const newWord = words[i].split("").reverse().join("");
+//     words[i] = newWord;
+//   }
+
+//   const newWords = words.join(" ");
+
+//   return `${splitted.shift()} ${newWords} ${splitted.pop()}`;
+// };
+// const hariu = reverseWord("Javascript bol uneheer sonirholtoi hel");
+// console.log(hariu);
+
+// #2. Өгүүлбэр дэх давтагдахгүй үгсүүдийг тоолох (том жижиг ялгахгүй). Зөвхөн a-z үсгийг тоолно. Жишээ: Оролт: "Sain uu?", Гаралт: 4
+
+// const countUniqueLetters = (str) => {
+//   let counter = 0;
+//   const uniqueLetters = {};
+
+//   for (let char of str) {
+//     const seenLetter = uniqueLetters[char];
+
+//     if (char >= "a" && char <= "z") {
+//       if (!seenLetter) {
+//         uniqueLetters[char] = 1;
+//         counter++;
+//       } else {
+//         delete uniqueLetters[char];
+//         counter--;
+//       }
+//     }
+//   }
+// //   console.log(uniqueLetters);
+//   return counter;
+// };
+// const hariu = countUniqueLetters("sain uu");
+// console.log(hariu);
+
+// #3. Давхардсан үсгүүдийг арилгаж дарааллыг хадгалах. Оролт: "aabbccddeeff", Гаралт: "abcdef"
+
+// const removeDuplicates = (str) => {
+//   let result = "";
+//   let remove = {};
+
+//   for (i = 0; i < str.length; i++) {
+//     let char = str[i];
+
+//     if (remove[char]) {
+//       remove[char]++;
+//     } else {
+//       remove[char] = 1;
+//       result = result + char;
+//     }
+//   }
+//   return result;
+// };
+// const hariu = removeDuplicates("aabbccddeeff");
+// console.log(hariu);
+
+// #4. kebab-case → camelCase болгох. Оролт: "hello-world-example", Гаралт: "helloWorldExample"
+
+// const countLetters = (str) => {
+//   const splitted = str.split("-");
+//   let camel = splitted[0];
+
+//   for (i = 1; i < splitted.length; i++) {
+//     const word = splitted[i];
+//     const capitalized = word[0].toUpperCase() + word.slice(1);
+
+//     camel += capitalized;
+//   }
+//   return camel;
+// };
+// const hariu = countLetters("hello-world-example");
+// console.log(hariu);
+
+// #5. Урт нь 4-өөс их бол дундах үсгүүдийг “*” болгох. Эхний 2 ба сүүлийн 2 үлдэнэ. Оролт: "mongolia", Гаралт: "mo****ia"
+
+// const hideMiddle = (str) => {
+//   if (str.length <= 4) return str;
+
+//   const firstTwoLetters = str.slice(0, 2);
+//   const lastTwoLetters = str.slice(-2);
+
+//   const starts = "*".repeat(str.length - 4);
+
+//   return firstTwoLetters + starts + lastTwoLetters;
+// };
+// const hariu = hideMiddle("mongolia");
+// console.log(hariu);

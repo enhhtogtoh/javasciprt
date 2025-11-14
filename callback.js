@@ -79,13 +79,14 @@
 // #8. repeatThreeTimes(callback) — callback-г 3 удаа ажиллуул.
 
 // const repeatThreeTimes = (callback) => {
-// const templateString =
-//   callback(templateString);
+//   callback();
+//   callback();
+//   callback();
 // };
 // const print = (text) => {
-//   console.log(text);
+//   console.log("callback");
 // };
-// repeatThreeTimes( print);
+// repeatThreeTimes(print);
 
 // #9. printArray(arr, callback) — массивын элемент бүрт callback-г ажиллуул.
 
@@ -148,14 +149,18 @@
 // #14. checkStringLength(str, callback) — урт нь 5-аас урт эсэхийг callback-д функцээр хэвлэ.
 
 // const checkStringLength = (str, callback) => {
-//   const templateString = `${str.length > 5 && "Long"}`;
-//   const templateString1 = `${str.length < 5 && "Short"}`;
-//   callback(templateString, templateString1);
+//   if (str.length >= 5) {
+//     console.log("Long");
+//   }
+//   if (str.length < 5) {
+//     console.log("Short");
+//   }
+//   callback();
 // };
 // const print = (text) => {
-//   console.log(text);
+//   console.log();
 // };
-// checkStringLength("sdshkh", print);
+// checkStringLength("sdsss", print);
 
 // #15. checkStartsWith(str, char, callback) — string тухайн үсгээр эхэлж байгаа эсэхийг callback-д функцээр хэвлэ.
 
@@ -172,12 +177,94 @@
 // #16. checkLogin(username, password, callback) — зөв хэрэглэгчийг шалгаад callback-д функцээр true false хэвлэ.
 
 // const checkLogin = (username, password, callback) => {
-
+//   const userName = "Enhhtogtoh";
+//   const passWord = "123444@";
+//   if (username === userName) {
+//     console.log("True");
+//   } else {
+//     console.log("False");
+//   }
+//   if (password === passWord) {
+//     console.log("True");
+//   } else {
+//     console.log("False");
+//   }
+//   callback(userName, passWord);
 // };
+// const print = (msg) => {
+//   console.log();
+// };
+// checkLogin("Enhhtogtoh", "123444@", print);
 
 // #17. isAdult(age, callback) — нас 18-аас дээш бол true-г callback-д өг.
+
+// const isAdult = (age, callback) => {
+//   const templateString = `${age >= 18}`;
+//   callback(templateString);
+// };
+// const print = (num) => {
+//   console.log(num);
+// };
+// isAdult(20, print);
+
 // #18. checkNumberType(num, callback) — тоо сондгой эсвэл тэгш гэдгийг callback-д өг.
+
+// const checkNumberType = (num, callback) => {
+//   const tegsh = `${num % 2 === 0}`;
+//   const sondgoi = `${num % 2 === 1}`;
+//   callback(tegsh, sondgoi);
+// };
+// const print = (num) => {
+//   console.log(num);
+// };
+// checkNumberType(5, print);
+
 // #19. printEach(arr, callback) — массивын элемент бүрт callback-г ажиллуул.
+
+// const printEach = (arr, callback) => {
+//   const templateString = `${[arr]}`;
+//   for (i = 0; i < arr.length; i++) {
+//     callback(arr[i]);
+//   }
+// };
+// const print = (num) => {
+//   console.log(num);
+// };
+// printEach([5, 4, 3, 2, 1], print);
+
 // #20. repeatNTimes(n, callback) — callback-г n удаа ажиллуул.
+
+// const repeatNTimes = (n, callback) => {
+//   const templateString = `${n}`;
+//   for (i = 0; i < n; i++) {
+//     callback();
+//   }
+// };
+// const print = () => {
+//   console.log("Hello");
+// };
+// repeatNTimes(4, print);
+
 // #21. countToFive(callback) — 1-ээс 5 хүртэл тоо хэвлээд дараа нь callback-г дуудаж “Done” гэж хэл.
+
+// const countToFive = (callback) => {
+//   for (i = 1; i <= 5; i++) {
+//     console.log(i);
+//   }
+//   callback("Done");
+// };
+// const print = (msg) => {
+//   console.log(msg);
+// };
+// countToFive(print);
+
 // #22. sumArray(arr, callback) — нийлбэрийг тооцоод callback-д дамжуул.
+
+// const sumArray = (arr, callback) => {
+//   const templateString = `${arr + arr}`;
+//   callback(templateString);
+// };
+// const print = (num) => {
+//   console.log(num, "Niilber");
+// };
+// sumArray(4, print);

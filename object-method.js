@@ -132,3 +132,25 @@
 // #19. JSON.parse() ашиглан string-ийг буцааж объект болгож хөрвүүл.
 
 // console.log(JSON.parse(string));
+
+// #1. Объектын бүх key-үүдийг camelCase руу хөрвүүлэх. Дотроо объект байвал тэрийг ч хөрвүүлнэ.
+
+const user = { first_name: "Bat", last_name: "Bold" };
+const upperCaseLetters = Object.keys(user);
+let camel = upperCaseLetters[0];
+
+for (i = 1; i < upperCaseLetters.length; i++) {
+  const word = upperCaseLetters[i];
+  const capitalized = word[0].toUpperCase() + word.slice(1);
+
+  camel += capitalized;
+}
+console.log(camel.split("_"));
+
+// #2. Объект доторх утгуудын төрлийг тоолох. Тоо, стринг, boolean, массив, объект – тус бүр хэд байгааг тооцно.
+
+// #3. Объектыг Deep Freeze хийх. Object.freeze()-ийг ашигла.
+
+// #4. Тодорхой утгатай бүх key-ийг олох. Давхар объектууд дундаас ч хайна. Жишээ: утга нь "admin" бол "role": "admin" гэх бүх key-г буцаах.
+
+// #5. Объектын key ба value-г сольж шинэ объект үүсгэх. Жишээ: { a: 1, b: 2 } → { 1: "a", 2: "b" }
