@@ -135,19 +135,28 @@
 
 // #1. Объектын бүх key-үүдийг camelCase руу хөрвүүлэх. Дотроо объект байвал тэрийг ч хөрвүүлнэ.
 
-const user = { first_name: "Bat", last_name: "Bold" };
-const upperCaseLetters = Object.keys(user);
-let camel = upperCaseLetters[0];
+// const user = { first_name: "Bat", last_name: "Bold" };
+// const upperCaseLetters = Object.keys(user);
+// let camel = upperCaseLetters[0];
 
-for (i = 1; i < upperCaseLetters.length; i++) {
-  const word = upperCaseLetters[i];
-  const capitalized = word[0].toUpperCase() + word.slice(1);
+// for (i = 1; i < upperCaseLetters.length; i++) {
+//   const word = upperCaseLetters[i];
+//   const capitalized = word[0].toUpperCase() + word.slice(1);
 
-  camel += capitalized;
-}
-console.log(camel.split("_"));
+//   camel += capitalized;
+// }
+// console.log(camel.split("_"));
 
 // #2. Объект доторх утгуудын төрлийг тоолох. Тоо, стринг, boolean, массив, объект – тус бүр хэд байгааг тооцно.
+
+const user = { name: "Bat", age: 22, city: "Ub" };
+const num = Object.values(user);
+
+for (i = 0; i < num.length; i++) {
+  const total = num[i];
+
+  console.log(total);
+}
 
 // #3. Объектыг Deep Freeze хийх. Object.freeze()-ийг ашигла.
 
