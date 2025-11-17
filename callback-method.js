@@ -260,9 +260,44 @@
 //     email: "bold@example.com",
 //   },
 // ];
-// const result = 90;
+// const emailUsers = "bold@example.com";
+// const result = users.find((value) => value.email === emailUsers);
 // console.log(result);
 
 // #33. Бүтээгдэхүүний массиваас id тохирох бүтээгдэхүүнийг ол.
+
+// const products = [
+//   { id: 1, name: "Keyboard", price: 30000 },
+//   { id: 2, name: "Mouse", price: 15000 },
+//   { id: 3, name: "Monitor", price: 250000 },
+// ];
+// const targetId = 1;
+
+// const result = products.find((value) => value.id === targetId);
+// console.log(result);
+
 // #34. Урт нь 10-аас их анхны стрингийг ол.
+
+// const array = ["hi", "javascript", "hello world", "short", "countryside"];
+
+// const result = array.find((value) => value.length > 10);
+// console.log(result);
+
 // #35. Үнэ нь 10000-аас дээш анхны бүтээгдэхүүнийг ол.
+
+// const products = [
+//   { id: 1, title: "Book", price: 5000 },
+//   { id: 2, title: "Bag", price: 12000 },
+//   { id: 3, title: "Laptop", price: 250000 },
+// ];
+
+// const result = products.find((value) => value.price > 10000);
+// console.log(result);
+
+// -------array--method--some-------
+
+// #36. Массив дотор сөрөг тоо байгаа эсэхийг шалга.
+// #37. Нэрсийн массив дотор “Admin” нэр байгаа эсэхийг some ашиглан шалга.
+// #38. Бүтээгдэхүүнүүдийн дунд үнэгүй (price = 0) зүйл байгаа эсэх.
+// #39. Оюутнуудын дунд 90-аас дээш оноо авсан хүн байгаа эсэх.
+// #40. Стринг массив дотор хоосон стринг байгаа эсэх.
