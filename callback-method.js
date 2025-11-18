@@ -297,7 +297,519 @@
 // -------array--method--some-------
 
 // #36. Массив дотор сөрөг тоо байгаа эсэхийг шалга.
+
+// const numbers = [1, 2, 3, 4, 5, -9];
+// const result = numbers.some((value) => value < 0);
+// console.log(result);
+
 // #37. Нэрсийн массив дотор “Admin” нэр байгаа эсэхийг some ашиглан шалга.
+
+// const names = ["admin", "operator", "creator"];
+// const result = names.some((value) => value.includes("admin"));
+// console.log(result);
+
 // #38. Бүтээгдэхүүнүүдийн дунд үнэгүй (price = 0) зүйл байгаа эсэх.
+
+// const products = [
+//   { id: 1, title: "Book", price: 0 },
+//   { id: 2, title: "Bag", price: 12000 },
+//   { id: 3, title: "Laptop", price: 250000 },
+// ];
+// const result = products.map((value) => value.price);
+// const result1 = result.some((value) => value === 0);
+// console.log(result1);
+
 // #39. Оюутнуудын дунд 90-аас дээш оноо авсан хүн байгаа эсэх.
+
+// const students = [
+//   { name: "Bold", score: 91 },
+//   { name: "Bat", score: 79 },
+//   { name: "Saraa", score: 76 },
+//   { name: "Tsetsegee", score: 98 },
+// ];
+
+// const result1 = students.some((value) => value.score > 90);
+// console.log(result1);
+
 // #40. Стринг массив дотор хоосон стринг байгаа эсэх.
+
+// const words = ["hello", "world", "js", ""];
+// const result = words.some((value) => value === "");
+// console.log(result);
+
+// -------array--method--every-------
+
+// #41. Бүх тоонууд эерэг эсэхийг шалга.
+
+// const numbers = [2, 4, 6, 8, 10];
+// const result = numbers.every((num) => num % 2 === 0);
+// console.log(result);
+
+// #42. Бүх хэрэглэгчид 18-аас дээш настай эсэх.
+
+// const users = [
+//   { name: "Bat", age: 21 },
+//   { name: "Bold", age: 10 },
+//   { name: "Saraa", age: 20 },
+// ];
+// const result = users.every((num) => num.age > 18);
+// console.log(result);
+
+// #43. Бүх бүтээгдэхүүн price талбартай эсэх.
+
+// const products = [
+//   { id: 1, title: "Book", price: 0 },
+//   { id: 2, title: "Bag", price: 12000 },
+//   { id: 3, title: "Laptop", price: 250000 },
+// ];
+
+// const result = products.every((value) => "price" in value);
+// console.log(result);
+
+// #44. Бүх стрингүүдийн урт 3-аас дээш эсэх.
+
+// const words = ["hello", "world", "javascript"];
+// const result = words.every((word) => word.length > 3);
+// console.log(result);
+
+// #45. Бүх boolean утга true эсэх.
+
+// const booleans = [true, true, true];
+// const result = booleans.every((word) => word === true);
+// console.log(result);
+
+// -------array--method--sort-------
+
+// #46. Тоон массивыг өсөхөөр эрэмбэл.
+
+// const numbers = [9, 4, 9, 32, 23, 98, 2, 8, 5];
+// const result = numbers.sort((a, b) => a - b);
+// console.log(result);
+
+// #47. Стринг массивыг цагаан толгойн дарааллаар эрэмбэл.
+
+// const words = ["banana", "orange", "apple", "grape"];
+// const result = words.sort();
+// console.log(result);
+
+// #48. Объектын массивыг price-ээр нь өсөхөөр эрэмбэл.
+
+// const cart = [
+//   { name: "Book", price: 10, quantity: 2 },
+//   { name: "Pen", price: 2, quantity: 5 },
+//   { name: "Notebook", price: 5, quantity: 3 },
+// ];
+// const result = cart.sort((a, b) => a.price - b.price);
+// console.log(result);
+
+// #49. Хэрэглэгчдийг name талбараар нь A–Z дарааллаар эрэмбэл.
+
+// const cart = [
+//   { name: "Book", price: 10, quantity: 2 },
+//   { name: "Pen", price: 2, quantity: 5 },
+//   { name: "Notebook", price: 5, quantity: 3 },
+// ];
+// const result = cart.map((value) => value.name);
+// const result1 = result.sort();
+// console.log(result1);
+
+// #50. Огноонуудын массивыг earliest → latest дарааллаар эрэмбэл.
+
+// -------methods-11.18--------
+
+// People array-аас 18 ба түүнээс дээш настай хүмүүсийн нэрийг шүүж гарга.
+
+// const people = [
+//   { name: "John", age: 17 },
+//   { name: "Jane", age: 20 },
+//   { name: "Jack", age: 18 },
+// ];
+
+// const result = people
+//   .filter((value) => value.age >= 18)
+//   .map((value) => value.name);
+
+// console.log(result);
+
+// Зөвхөн эерэг тоонуудаар массив үүсгэ.
+
+// const nums = [-5, 3, -1, 7, 0];
+// const result = nums.filter((value) => value > 0);
+// console.log(result);
+
+// 3 аас дээш тооны урттай элементүүдээр массив үүсгэ.
+
+// const words = ["hi", "hello", "yo", "world"];
+// const result = words.filter((word) => word.length > 3);
+// console.log(result);
+
+// Доорх array аас сондгой тоонуудыг 2 дахин ихэсгэсэн массив үүсгэ.
+
+// const numbers = [1, 2, 3, 4, 5];
+// const result = numbers.filter((num) => num % 2 === 1);
+// const result1 = result.map((num) => num * 2);
+// console.log(result1);
+
+// Pass хийсэн сурагдын firstname ийг нь upperCase болгосон array үүсгэ
+
+// const students = [
+//   { firstName: "John", lastName: "Doe", passed: true },
+//   { firstName: "Jane", lastName: "Smith", passed: false },
+//   { firstName: "Alice", lastName: "Jones", passed: true },
+// ];
+
+// const result = students.filter((value) => value.passed === true);
+// const result1 = result.map((value) => value.firstName.toLocaleUpperCase());
+
+// console.log(result1);
+
+// хамгийн өндөр оноотой 3 дүнгээр нь массив үүсгэ.
+
+// const students = [
+//   { name: "A", score: 88 },
+//   { name: "B", score: 95 },
+//   { name: "C", score: 72 },
+//   { name: "D", score: 99 },
+//   { name: "E", score: 91 },
+// ];
+// const result = students.sort((a, b) => b.score - a.score);
+// const result1 = result.slice(0, 3);
+// const result2 = result1.map((value) => value.name);
+// console.log(result2);
+
+// cart дахь бүх бараануудын үнийн дүнгийн нийлбэрийг ол
+
+// const cart = [
+//   { name: "Book", price: 10, quantity: 2 },
+//   { name: "Pen", price: 2, quantity: 5 },
+//   { name: "Notebook", price: 5, quantity: 3 },
+// ];
+// const result = cart.map((num) => num.price * num.quantity);
+// const result1 = result.reduce((acc, num) => acc + num, 0);
+// console.log(result1);
+
+// Өгөгдсөн string төрлийн массив дотроос хамгийн урт үгийг ол.
+
+// const words = ["hello", "world", "typescript", "js"];
+// const result = words.reduce((acc, num) =>
+//   num.length > acc.length ? num : acc
+// );
+// console.log(result);
+
+// Доорх массивын бүх элементүүдийн үсгийн нийлбэрийг ол
+
+// const words = ["hi", "hello", "hey"];
+// const result = words.map((num) => num.length);
+// const result1 = result.reduce((acc, num) => acc + num, 0);
+// console.log(result1);
+
+// Хамгийн үнэтэй бүтээгдэхүүнийг харуул
+
+// const products = [
+//   { name: "Laptop", price: 900 },
+//   { name: "Phone", price: 700 },
+//   { name: "Monitor", price: 300 },
+// ];
+// const result = products.reduce((acc, num) =>
+//   num.price > acc.price ? num : acc
+// );
+// console.log(result);
+
+// бүх бүтээгдэхүүний нийлбэр үнийн дүнг ол
+
+// const items = [
+//   { name: "Chair", price: 80 },
+//   { name: "Desk", price: 120 },
+//   { name: "Lamp", price: 150 },
+// ];
+// const result = items.map((num) => num.price);
+// const result1 = result.reduce((acc, num) => acc + num, 0);
+// console.log(result1);
+
+// -------llr-urt-bodlogo------
+
+// const leaveRequests = [
+//   {
+//     employeeId: 1,
+//     type: "annual",
+//     status: "approved",
+//     daysRequested: 5,
+//     date: "2025-01-15",
+//   },
+//   {
+//     employeeId: 2,
+//     type: "sick",
+//     status: "pending",
+//     daysRequested: 2,
+//     date: "2025-02-10",
+//   },
+//   {
+//     employeeId: 3,
+//     type: "annual",
+//     status: "approved",
+//     daysRequested: 3,
+//     date: "2025-03-05",
+//   },
+//   {
+//     employeeId: 4,
+//     type: "sick",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-04-01",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "unpaid",
+//     status: "approved",
+//     daysRequested: 4,
+//     date: "2025-05-10",
+//   },
+//   {
+//     employeeId: 2,
+//     type: "annual",
+//     status: "rejected",
+//     daysRequested: 2,
+//     date: "2025-06-15",
+//   },
+//   {
+//     employeeId: 5,
+//     type: "sick",
+//     status: "approved",
+//     daysRequested: 2,
+//     date: "2025-07-12",
+//   },
+//   {
+//     employeeId: 6,
+//     type: "annual",
+//     status: "approved",
+//     daysRequested: 6,
+//     date: "2025-08-22",
+//   },
+//   {
+//     employeeId: 3,
+//     type: "sick",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-09-04",
+//   },
+//   {
+//     employeeId: 4,
+//     type: "unpaid",
+//     status: "pending",
+//     daysRequested: 2,
+//     date: "2025-10-03",
+//   },
+//   {
+//     employeeId: 5,
+//     type: "annual",
+//     status: "approved",
+//     daysRequested: 3,
+//     date: "2025-11-14",
+//   },
+//   {
+//     employeeId: 2,
+//     type: "sick",
+//     status: "approved",
+//     daysRequested: 2,
+//     date: "2025-12-01",
+//   },
+//   {
+//     employeeId: 6,
+//     type: "sick",
+//     status: "rejected",
+//     daysRequested: 1,
+//     date: "2025-01-20",
+//   },
+//   {
+//     employeeId: 3,
+//     type: "annual",
+//     status: "approved",
+//     daysRequested: 2,
+//     date: "2025-02-25",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "sick",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-03-12",
+//   },
+
+//   {
+//     employeeId: 1,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-01-05",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-02-14",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-03-18",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-04-09",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-05-23",
+//   },
+//   {
+//     employeeId: 2,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-06-03",
+//   },
+//   {
+//     employeeId: 2,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-07-16",
+//   },
+//   {
+//     employeeId: 3,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-08-02",
+//   },
+//   {
+//     employeeId: 4,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-09-19",
+//   },
+//   {
+//     employeeId: 5,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-10-05",
+//   },
+//   {
+//     employeeId: 6,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-11-09",
+//   },
+//   {
+//     employeeId: 1,
+//     type: "paid",
+//     status: "approved",
+//     daysRequested: 1,
+//     date: "2025-12-13",
+//   },
+// ];
+// const result = leaveRequests.filter((value) => value.status === "approved");
+// const result2 = result.reduce((acc, num) => acc + num.daysRequested, 0);
+// console.log(result2);
+
+// ----------bodlogo1---------
+const products = [
+  {
+    name: "Smartphone",
+    price: 599.99,
+    stock: 50,
+    category: "Electronics",
+    brand: "Samsung",
+  },
+  {
+    name: "Laptop",
+    price: 1099.99,
+    stock: 30,
+    category: "Electronics",
+    brand: "Apple",
+  },
+  {
+    name: "Headphones",
+    price: 129.99,
+    stock: 100,
+    category: "Electronics",
+    brand: "Sony",
+  },
+  {
+    name: "Running Shoes",
+    price: 79.99,
+    stock: 80,
+    category: "Sports",
+    brand: "Nike",
+  },
+  {
+    name: "Coffee Maker",
+    price: 49.99,
+    stock: 20,
+    category: "Home Appliances",
+    brand: "Keurig",
+  },
+  {
+    name: "Backpack",
+    price: 39.99,
+    stock: 60,
+    category: "Fashion",
+    brand: "Adidas",
+  },
+  {
+    name: "Watch",
+    price: 199.99,
+    stock: 40,
+    category: "Accessories",
+    brand: "Casio",
+  },
+  {
+    name: "Gaming Console",
+    price: 399.99,
+    stock: 25,
+    category: "Electronics",
+    brand: "Microsoft",
+  },
+  {
+    name: "Sunglasses",
+    price: 149.99,
+    stock: 70,
+    category: "Fashion",
+    brand: "Ray-Ban",
+  },
+  {
+    name: "Wireless Speaker",
+    price: 89.99,
+    stock: 45,
+    category: "Electronics",
+    brand: "JBL",
+  },
+];
+
+// 1. duriin category ogohod tuhain category deerh productuudiig haruul.
+const result = products.filter((value) => value.category === "Electronics");
+console.log(result);
+
+// 2. productuudiin dundaj stock iig ol.
+const result1 = result.reduce((acc, num) => acc + num.stock / 5, 0);
+console.log(result1);
+
+// 3. olson dundaj stockoos ih stocktoi bvteegdehuunuudiig haruul.
+const result2 = result.filter((value) => value.stock >= result1);
+console.log(result2);
+
+// 4. dundajaas ih stocktoi bvteegdehuuniin niit uniig garga (Tip: price* stock)
+const result3 = result2.map((value) => value.price * value.stock);
+console.log(result3);
